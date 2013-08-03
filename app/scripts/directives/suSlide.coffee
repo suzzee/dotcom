@@ -1,4 +1,4 @@
-ngSeedApp.directive 'suSlide', factory = () ->
+dotCom.directive 'suSlide', factory = () ->
   template: '<div>test slide</div>'
   restrict: 'E'
   replace: true

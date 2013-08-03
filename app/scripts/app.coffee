@@ -1,6 +1,6 @@
 'use strict'
 
-angular.module('ngSeedApp', [])
+angular.module('dotCom', [])
   .config ($routeProvider) ->
     $routeProvider
       .when '/',
