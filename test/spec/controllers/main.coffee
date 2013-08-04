@@ -5,15 +5,15 @@ describe 'Controller: prettyFace', () ->
   # load the controller's module
   beforeEach module 'dotcom'
 
-  MainCtrl = {}
+  prettyFace = {}
   scope = {}
 
   # Initialize the controller and a mock scope
   beforeEach inject ($controller, $rootScope) ->
     scope = $rootScope.$new()
-    MainCtrl = $controller 'prettyFace', {
+    prettyFace = $controller 'prettyFace', {
       $scope: scope
     }
 
-  it 'should attach a list of awesomeThings to the scope', () ->
-    expect(scope.awesomeThings.length).toBe 3;
+  it 'should attach a list of my name to the scope', () ->
+    expect(scope.scope.length).toBe 9;
