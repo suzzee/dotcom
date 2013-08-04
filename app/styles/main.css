@@ -20,3 +20,19 @@ body {
     line-height: 1;
     letter-spacing: -1px;
 }
+
+.slide {
+  background-color:#87cefa;
+  margin: 10px 0px;
+}
+p.heading{
+  color: white;
+  font-size:24px;
+  font-weight:bold;
+  padding: 20px 10px;
+}
+.br {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
