@@ -1,6 +1,6 @@
 'use strict'
 
-angular.module('dotCom', [])
+angular.module('dotcom', [])
   .config ($routeProvider) ->
     $routeProvider
       .when '/',

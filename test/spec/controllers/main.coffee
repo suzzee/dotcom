@@ -1,9 +1,9 @@
 'use strict'
 
-describe 'Controller: MainCtrl', () ->
+describe 'Controller: prettyFace', () ->
 
   # load the controller's module
-  beforeEach module 'ngSeedApp'
+  beforeEach module 'dotcom'
 
   MainCtrl = {}
   scope = {}
@@ -11,7 +11,7 @@ describe 'Controller: MainCtrl', () ->
   # Initialize the controller and a mock scope
   beforeEach inject ($controller, $rootScope) ->
     scope = $rootScope.$new()
-    MainCtrl = $controller 'MainCtrl', {
+    MainCtrl = $controller 'prettyFace', {
       $scope: scope
     }
 
