@@ -5,6 +5,12 @@
   <div class="listeningto">
     <!-- now playing or relative time -->
     <div class="block"><img src="../images/listeningto.gif" /></div>
-    <div class="block"><p>Listening to:</p><div>
+    <div class="block">
+      Listening to: 
+      <ul>
+        <li ng-repeat="s in scrobble">
+          {{s.track}}
+	</li>
+    </div>
   </div>
 </div>
