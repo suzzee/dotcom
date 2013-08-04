@@ -1,5 +1,5 @@
 body {
-    background: transparent url('../images/farm.jpg') center -49px repeat-x;
+    background: transparent url('../images/nyack.jpg') center -49px repeat;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #333;
 }
@@ -8,7 +8,7 @@ body {
   width:100%
 }
 .name{
-  padding:175px 0px 0px 75px;
+  padding:35px 0px 0px 75px;
 }
 .name div:nth-child(7){
   opacity:0
