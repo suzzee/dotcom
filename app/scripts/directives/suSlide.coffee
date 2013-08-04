@@ -1,6 +1,6 @@
 angular.module('dotcom')
   .directive 'slide', factory = () ->
-    template: '<div class="slide br"><p class="heading">{{thing}}</p></div>'
+    templateUrl: 'views/partials/slide.html'
     restrict: 'E'
     replace: true
     transclude: true
