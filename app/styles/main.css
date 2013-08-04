@@ -14,11 +14,23 @@ body {
   opacity:0
 }
 
+.main .content{
+  width:100%;
+  background: transparent url('../images/white.png');
+ }
 .slide {
   background: transparent url('../images/white.png');
   margin: 10px 0px;
   height:50px
 }
+.block{
+ background-color:white;
+ padding:5px;
+ display:inline-block;
+ *zoom:1;
+ font-size:11px; color:#8A9BA2
+}
+
 .repeater{
   text-align:center;
   height:50px;
@@ -26,6 +38,9 @@ body {
   display:inline-block;
   *zoom:1;
   margin: 0px 5px 20px;
+}
+.content{
+  padding:25px 85px;
 }
 p.heading{
   color: white;
