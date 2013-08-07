@@ -15,24 +15,26 @@ describe 'Controller: prettyFace', () ->
       response: 'response'
 
   # Initialize the controller and a mock scope
-  beforeEach inject ($controller, $rootScope) ->
-    scope = $rootScope.$new()
-    prettyFace = $controller 'prettyFace', {
-      $scope: scope
-    }
+
+    $rootscope = $injector.get '$rootScope' 
+    $controller = $injector.get '$controller'
+    createController = ->
+     $controller 'prettyFace', {'$scope': $rootScope}
+
+   afterEach ->
+     $httpBackend.verifyNoOutstandingExpectation
+     $httpBackend.verifyNoOutstandingRequest
 
   # name length
   it 'should have nine characters', () ->
-    expect(scope.scope.length).toBe 9;
+    expect(scope.name.length).toBe 9;
 
   # $http call to last.fm
   it 'should make the $http get call to last.fm', () ->
-    expect(scope.scope.length).toBe 9;
+    $httpBackend.expectGET 'GET', 'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=sugrcuki&api_key=4b94553f11090b7919dd36523370cd4f&format=json'
+    controller = createController
+    httpBackend.flush
 
   # assign title to scope 
-  it 'should assign track title to scope', () ->
-    expect(scope.scope.length).toBe 9;
 
   # assign artist to scope 
-  it 'should assign track artist to scope', () ->
-    expect(scope.scope.length).toBe 9;
