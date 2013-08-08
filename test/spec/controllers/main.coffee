@@ -6,19 +6,20 @@ describe 'Controller: prettyFace', () ->
   beforeEach module 'dotcom'
 
   scope = {}
+  httpBackend = {}
+  controller= {}
 
   # Initialize $httpBackend service
-  beforeEach inject ($controller, $rootScope, $httpBackend) ->
-    httpBackend = $httpBackend.$new()
+  beforeEach inject ($httpBackend, $rootScope, $controller) ->
+    httpBackend = $httpBackend
     httpBackend.when('GET', 'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=sugrcuki&api_key=4b94553f11090b7919dd36523370cd4f&format=json').respond
       response: 'response'
 
-  # Initialize the controller and a mock scope
-
-    rootscope = $rootScope.$new() 
-    controller = $controller.$new()
-    createController = ->
-     $controller 'prettyFace', {'$scope': $rootScope}
+    # Initialize the controller and a mock scope
+    scope = $rootScope.$new()
+    prettyFace = $controller 'prettyFace', {
+      $scope: scope
+    }
 
   afterEach ->
     httpBackend.verifyNoOutstandingExpectation
@@ -26,12 +27,11 @@ describe 'Controller: prettyFace', () ->
 
   # name length
   it 'should have nine characters', () ->
-    expect(rootScope.name.length).toBe 9;
+    expect(scope.name.length).toBe 9;
 
   # $http call to last.fm
   it 'should make the $http get call to last.fm', () ->
-    $httpBackend.expectGET 'GET', 'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=sugrcuki&api_key=4b94553f11090b7919dd36523370cd4f&format=json'
-    controller = createController
+    httpBackend.expectGET 'GET', 'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=sugrcuki&api_key=4b94553f11090b7919dd36523370cd4f&format=json'
     httpBackend.flush
 
   # assign title to scope 
