@@ -22,18 +22,19 @@ describe 'Controller: prettyFace', () ->
     }
 
   afterEach ->
-    httpBackend.verifyNoOutstandingExpectation
-    httpBackend.verifyNoOutstandingRequest
+    httpBackend.flush()
+    httpBackend.verifyNoOutstandingExpectation()
+    httpBackend.verifyNoOutstandingRequest()
 
   # name length
   it 'should have nine characters', () ->
     expect(scope.name.length).toBe 9;
 
-  # $http call to last.fm
-  it 'should make the $http get call to last.fm', () ->
-    httpBackend.expectGET 'GET', 'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=sugrcuki&api_key=4b94553f11090b7919dd36523370cd4f&format=json'
-    httpBackend.flush
-
   # assign title to scope 
 
   # assign artist to scope 
+  
+  # $http call to last.fm - this should be in another controller
+  it 'should make the $http get call to last.fm', () ->
+    httpBackend.expectGET 'GET', 'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=sugrcuki&api_key=4b94553f11090b7919dd36523370cd4f&format=json'
+
