@@ -37,4 +37,3 @@ describe 'Controller: prettyFace', () ->
   # $http call to last.fm - this should be in another controller
   it 'should make the $http get call to last.fm', () ->
     httpBackend.expectGET 'GET', 'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=sugrcuki&api_key=4b94553f11090b7919dd36523370cd4f&format=json'
-
