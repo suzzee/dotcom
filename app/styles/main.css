@@ -4,6 +4,13 @@ body {
     color: #333;
 }
 
+#listeningto{
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: .2s;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-fill-mode: both;
+}
+
 .main .container{
   width:100%
 }
