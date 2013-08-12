@@ -2,11 +2,11 @@
   <div class="repeater" ng-repeat="n in name"><slide></slide></div>
 </div>
 <div class="content">
-  <div id="listeningto">
+  <div ng-cloak id="listeningto">
     <!-- now playing or relative time -->
     <div class="block"><img src="../images/listeningto.gif" /></div>
     <div class="block">
-	    <b>Listening to:</b> "{{title}}" by {{artist}}
+      <b>Listening to:</b> "{{title}}" by {{artist}}
     </div>
   </div>
 </div>
