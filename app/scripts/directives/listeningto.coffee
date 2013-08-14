@@ -6,7 +6,6 @@ angular.module('dotcom')
     transclude: true
     scope: true
     controller: ($scope) ->
-      console.log $scope
       $http.get('http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=sugrcuki&api_key=4b94553f11090b7919dd36523370cd4f&format=json')
         .success (data) ->
    	  # already need to refactor this.
@@ -16,4 +15,5 @@ angular.module('dotcom')
         .error (data, status, headers, config) ->
           console.log 'error' 
     link: (s, e, a) ->
-      console.log 'i am writing the controllers wrong'
+      listenDiv = e
+      listenDiv.addClass('fadeInUp')
