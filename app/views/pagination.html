@@ -1,3 +1,7 @@
-<div id="pagination" ng-controller="PaginationController">
-  <div ng-repeat="album in albums">{{album}}</div>
+<div id="pagination">
+  <div ng-repeat="album in albums" class="content container">
+    <img src="{{album.image[1]['#text']}}" />
+    <div class="artist">{{album.artist.name}}</div>
+    <div class="album-name">{{album.name}}</div>
+  </div>
 </div>

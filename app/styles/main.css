@@ -25,6 +25,12 @@ body {
   width:100%;
   background: transparent url('../images/white.png');
  }
+ .content.container {
+  vertical-align:top;
+  margin:10px;
+  width:120px;
+  display: inline-block;
+ }
 .slide {
   background: transparent url('../images/white.png');
   margin: 10px 0px;
