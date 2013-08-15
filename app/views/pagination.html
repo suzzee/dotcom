@@ -1,7 +1,15 @@
 <div id="pagination">
   <div ng-repeat="album in albums" class="content container">
-    <img src="{{album.image[1]['#text']}}" />
-    <div class="artist">{{album.artist.name}}</div>
-    <div class="album-name">{{album.name}}</div>
+    <div class="album">
+      <img src="{{album.image[1]['#text']}}" />
+      <div class="album-name">
+        <p>
+          <b>{{album.name}}</b>
+        </p>
+        <p>
+          {{album.artist.name}}
+        </p>
+      </div>
+    </div>
   </div>
 </div>
