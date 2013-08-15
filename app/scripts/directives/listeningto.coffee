@@ -16,4 +16,4 @@ angular.module('dotcom')
           console.log 'error' 
     link: (s, e, a) ->
       listenDiv = e
-      listenDiv.addClass('fadeInUp')
+      listenDiv.removeClass('none').addClass('fadeInUp')

@@ -5,6 +5,12 @@ angular.module('dotcom', [])
     $routeProvider
       .when '/',
         templateUrl: 'views/main.html'
-        controller: 'prettyFace'
+        controller: 'DotcomController'
+      .when '/pagination',
+        templateUrl: 'views/pagination.html'
+        controller: 'PaginationController'
+      .when '/forms',
+        templateUrl: 'views/forms.html'
+        controller: 'FormController'
       .otherwise
         redirectTo: '/'

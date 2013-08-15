@@ -1,6 +1,6 @@
 'use strict'
 
-describe 'Controller: prettyFace', () ->
+describe 'Controller: DotcomController', () ->
 
   # load the controller's module
   beforeEach module 'dotcom'
@@ -8,7 +8,7 @@ describe 'Controller: prettyFace', () ->
   scope = {}
   httpBackend = {}
   controller = {}
-  prettyFace = {}
+  DotcomController = {}
 
   # Initialize $httpBackend service
   beforeEach inject ($httpBackend, $rootScope, $controller) ->
@@ -18,7 +18,7 @@ describe 'Controller: prettyFace', () ->
 
     # Initialize the controller and a mock scope
     scope = $rootScope
-    prettyFace = $controller 'prettyFace', {
+    DotcomController = $controller 'DotcomController', {
       $scope: scope
     }
 

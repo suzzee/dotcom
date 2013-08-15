@@ -66,6 +66,6 @@ p.heading{
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 20px;
 }
-[ng\:cloak], [ng-cloak], .ng-cloak {
+[ng\:cloak], [ng-cloak], .ng-cloak, .none {
   display: none !important;
 }
